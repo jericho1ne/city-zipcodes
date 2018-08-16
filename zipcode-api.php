@@ -3,10 +3,6 @@
     $auth_id = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
     $auth_token = 'xxxxxxxxxxxxxxxxxxxx';
 
-
-$auth_id = '6d7e4236-5497-d58a-d5bc-6ab2c968f439';
-$auth_token = 'E15H58eEGA2v2Xy80Gzh';
-
     // Choose a state name
     $state = "CA";
 
