@@ -3,6 +3,10 @@
     $auth_id = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
     $auth_token = 'xxxxxxxxxxxxxxxxxxxx';
 
+
+$auth_id = '6d7e4236-5497-d58a-d5bc-6ab2c968f439';
+$auth_token = 'E15H58eEGA2v2Xy80Gzh';
+
     // Choose a state name
     $state = "CA";
 
@@ -34,9 +38,18 @@
         // Replace all spaces with `+` signs
         $city =  str_replace(' ', '+', $city);
 
-        // Set URL
-        $base = "https://us-zipcode.api.smartystreets.com/lookup?";
-        $url = $base . "auth-id={$auth_id}&auth-token={$auth_token}&city={$city}&state={$state}";
+        // Set up the API url and required params
+        $base_url = "https://us-zipcode.api.smartystreets.com/lookup?";
+        $params = [
+            'auth-id'    => $auth_id,
+            'auth-token' => $auth_token,
+            'city'       => $city,
+            'state'      => $state,
+        ];
+
+        // Builds full url.
+        // First decodes the URL-encoded string, otherwise the `+` signs get jacked up.
+        $url = $base_url . urldecode(http_build_query($params));
         
         // Setup the cURL call
         curl_setopt($ch, CURLOPT_URL, $url);
