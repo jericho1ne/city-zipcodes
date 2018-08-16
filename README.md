@@ -2,13 +2,16 @@
 Simple Smarty Streets zipcode API wrapper that outputs a comma-separated list of zipcodes based on a given city name.
 
 ## GET YOUR ZIPCODE API KEY
-The Smarty Streets zipcode api allows 250 free lookups per month.
+The Smarty Streets zipcode api allows 250 free lookups per month. Use them wisely.
+
 https://smartystreets.com/products/apis/us-zipcode-api
 
-Get the Free account here (you only need to provide a Name and Email address)
+Get the Free account here (you only need to provide a Name and Email address):
+
 https://smartystreets.com/pricing
 
 Get your API Keys from here:
+
 https://smartystreets.com/account#keys
 
 Keep that **Auth ID** and **Auth Token** handy, you'll need them for next step.
